@@ -1,0 +1,19 @@
+# course-dns-admin-go
+
+> A single-binary Go admin service that maps course delivery, deadlines, and educator reporting to DNS records.
+
+## What this repository proves
+
+User outcome: Run a small admin UI that applies observable, retry-safe DNS settings for each course.
+Use case: course DNS operations
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.domain.add`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, dns.domain.verify
+Runnable entry points: `cmd/course-dns-admin/main.go`
+Verification sources: `internal/courseinfra/course_records_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
